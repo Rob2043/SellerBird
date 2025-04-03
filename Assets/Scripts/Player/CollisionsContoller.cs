@@ -9,8 +9,8 @@ public class CollisionsController : MonoBehaviour
     {
         if (collision.CompareTag("EndGame") && collision.TryGetComponent(out obstacle))
         {
+            EventBus.endGame();
             obstacle.collision2D.isTrigger = false;
-            Time.timeScale = 0f;
         }
         if (collision.gameObject.CompareTag("BottomCollision"))
         {

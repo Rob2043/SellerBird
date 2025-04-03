@@ -7,6 +7,8 @@ TagManager:
   - BottomCollision
   - Score
   - EndGame
+  - Obstacle
+  - Cloud
   layers:
   - Default
   - TransparentFX
