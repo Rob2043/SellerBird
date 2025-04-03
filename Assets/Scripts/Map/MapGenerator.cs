@@ -58,7 +58,7 @@ public class MapGenerator : MonoBehaviour
         {
             _ObjectsPool.RemoveAt(0);
             float distanceToSpawn = Random.Range(SCRIPT_CONSTANS.MinGapForSpawning, SCRIPT_CONSTANS.MaxGapForSpawning);
-            firstObject.transform.position = new Vector2(distanceToSpawn, _spawnPosition.y);
+            firstObject.transform.position = new Vector2(_spawnPosition.x + distanceToSpawn, _spawnPosition.y);
             _ObjectsPool.Add(firstObject);
         }
         else if (firstObject.tag == "Cloud")
@@ -66,7 +66,7 @@ public class MapGenerator : MonoBehaviour
             _cloudsObjectsPool.RemoveAt(0);
             float cloudsDistanceToSpawn = Random.Range(SCRIPT_CONSTANS.MinDistanceForCloudsX, SCRIPT_CONSTANS.MaxDistanceForCloudsX);
             int randomY = Random.Range(SCRIPT_CONSTANS.MinYForCloud, SCRIPT_CONSTANS.MaxYForCloud);
-            firstObject.transform.position = new Vector2(cloudsDistanceToSpawn, randomY);
+            firstObject.transform.position = new Vector2(_spawnPosition.x + cloudsDistanceToSpawn, randomY);
             _cloudsObjectsPool.Add(firstObject);
         }
     }

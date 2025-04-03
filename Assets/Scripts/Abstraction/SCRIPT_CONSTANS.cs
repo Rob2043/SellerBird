@@ -6,7 +6,7 @@ namespace CONSTANTS
         public const int MinGapForSpawning = 3;
         public const int MaxGapForSpawning = 8;
         public const int ObstacleCount = 5;
-        public const int PositionForRespawning = -18;
+        public const int PositionForRespawning = -10;
         public const int CloudCount = 5;
         public const int MinYForCloud = 2;
         public const int MaxYForCloud = -4;
