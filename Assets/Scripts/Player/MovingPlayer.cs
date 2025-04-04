@@ -26,7 +26,7 @@ public class MovingPlayer : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             _rigidbody.AddForce(Vector2.up * _speed, ForceMode2D.Impulse);
         }

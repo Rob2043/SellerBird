@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CONSTANTS;
+using CustomInterfaces;
 
 
 public class MapGenerator : MonoBehaviour
@@ -59,6 +60,7 @@ public class MapGenerator : MonoBehaviour
             _ObjectsPool.RemoveAt(0);
             float distanceToSpawn = Random.Range(SCRIPT_CONSTANS.MinGapForSpawning, SCRIPT_CONSTANS.MaxGapForSpawning);
             firstObject.transform.position = new Vector2(_spawnPosition.x + distanceToSpawn, _spawnPosition.y);
+            firstObject.GetComponent<IMainObstcle>().ChanhgePosition();
             _ObjectsPool.Add(firstObject);
         }
         else if (firstObject.tag == "Cloud")
